@@ -6,12 +6,14 @@ const Header = () => {
     return (
         <div className='header'>
 
-            <Link to={'/home'}>Home</Link >
-            <Link to={'/about'}>About</Link >
-            <Link to={'/products'}>products</Link >
-            <Link to={'/Barighor'}>barighor</Link >
+            <nav>
+                <Link to={'/home'}>Home</Link >
+                <Link to={'/about'}>About</Link >
+                <Link to={'/products'}>products</Link >
+                <Link to={'/Barighor'}>barighor</Link >
+            </nav>
 
-
+            <h3>Common</h3>
 
 
         </div>

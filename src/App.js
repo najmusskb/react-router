@@ -8,15 +8,24 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Products from './components/Products/Products';
 import Barighor from './components/Barighor/Barighor';
+import Main from './Layout/Main';
 
 
 function App() {
   const router = createBrowserRouter([
-    { path: '/', element: <div>This is defoult page</div> },
-    { path: '/home', element: <Home></Home> },
-    { path: '/about', element: <About></About> },
-    { path: '/Products', element: <Products></Products> },
-    { path: '/Barighor', element: <Barighor></Barighor> }
+    {
+      path: '/', element: <Main></Main>,
+      children: [
+        { path: '/', element: <Home></Home> },
+        { path: '/home', element: <Home></Home> },
+        { path: '/about', element: <About></About> },
+        { path: '/Products', element: <Products></Products> },
+        { path: '/Barighor', element: <Barighor></Barighor> }
+      ]
+    },
+
+
+
 
   ])
   return (
