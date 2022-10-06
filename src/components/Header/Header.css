@@ -1,0 +1,19 @@
+.header a {
+
+    text-decoration: none;
+
+    padding: 10px;
+    background-color: gray;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.header {
+    margin-top: 40px;
+
+}
+
+.header a:hover {
+    background-color: lightblue;
+}
