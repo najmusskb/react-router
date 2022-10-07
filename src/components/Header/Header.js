@@ -12,7 +12,6 @@ const Header = () => {
                 <Link to={'/products'}>products</Link >
                 <Link to={'/Barighor'}>barighor</Link >
             </nav>
-
             <h3>Common</h3>
 
 

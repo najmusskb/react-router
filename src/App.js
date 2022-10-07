@@ -19,11 +19,21 @@ function App() {
         { path: '/', element: <Home></Home> },
         { path: '/home', element: <Home></Home> },
         { path: '/about', element: <About></About> },
-        { path: '/Products', element: <Products></Products> },
-        { path: '/Barighor', element: <Barighor></Barighor> }
+
+        {
+          path: '/Products',
+
+          loader: async () => {
+            return fetch('https://jsonplaceholder.typicode.com/users')
+          },
+          element: < Products ></Products >
+        },
+
+        { path: '/Barigh', element: <Barighor></Barighor> }
       ]
     },
 
+    { path: '/*', element: <div>This Route Not Found</div> }
 
 
 
