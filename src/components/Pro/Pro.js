@@ -10,8 +10,6 @@ const Pro = ({ product }) => {
             <p>Name:{name}</p>
             <p>Email:{email}</p>
 
-
-
             {/* daynamic vabe link kivabe banabo and route korbo */}
             <p>UserName:<Link to={`/Product/${id}`}>{username}</Link></p>
 
