@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 
 import './App.css';
 
@@ -9,6 +8,7 @@ import About from './components/About/About';
 import Products from './components/Products/Products';
 import Barighor from './components/Barighor/Barighor';
 import Main from './Layout/Main';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 
 function App() {
@@ -26,10 +26,25 @@ function App() {
           loader: async () => {
             return fetch('https://jsonplaceholder.typicode.com/users')
           },
+
           element: < Products ></Products >
         },
 
-        { path: '/Barigh', element: <Barighor></Barighor> }
+
+
+        // module 52.5  daynamic vabe route set kora 
+        {
+          path: 'Product/:Productid',
+          loader: async ({ params }) => {
+            // console.log(params)
+            return fetch(`https://jsonplaceholder.typicode.com/users/${params.Productid}`)
+
+          },
+          element: < ProductDetails ></ProductDetails >
+        },
+
+
+        { path: '/Barighor', element: <Barighor></Barighor> }
       ]
     },
 
